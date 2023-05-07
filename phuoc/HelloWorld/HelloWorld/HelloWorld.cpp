@@ -12,7 +12,12 @@ std::string getName(int index) {
 
 	//dung switch case hoac if
 
-	//idex 0 -> TuCoNy
+
+	if (index == 3) {
+		return "phuoc";
+	}
+
+	//id 0 -> TuCoNy
 	//id 1 -> chaubacho
 	//id 2 -> docCoCauBai
 	//id 3 -> phuoc
@@ -44,6 +49,27 @@ bool coChetKhong(Hero& doithu) {
 	return false;
 }
 
+
+void showMinMaxHeros(Hero dsDoithu[5]) {
+
+
+	std::cout << "cau4" << std::endl;;
+}
+
+void decimaToBinary(Hero dsDoithu[5]) {
+
+	std::cout << "cau5" << std::endl;;
+
+	for (int i = 0; i < 5; i++) {
+
+		int mau = dsDoithu[i].hp;
+
+		// chyen doi decima to binary o day.
+
+	}
+}
+
+
 int main()
 {
 	const int soluongDoiThu = 5;
@@ -73,5 +99,14 @@ int main()
 			std::cout << dsDoithu[i].name << "da chet!";
 		}
 	}
+
+	//4
+	showMinMaxHeros(dsDoithu);
+
+	//5.
+
+	decimaToBinary(dsDoithu);
+
+
 }
 
