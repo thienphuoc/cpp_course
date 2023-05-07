@@ -1,20 +1,77 @@
-// HelloWorld.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include <vector>
+
+struct Hero {
+
+	std::string name;
+	int hp;//[0,100]
+};
+
+
+std::string getName(int index) {
+
+	//dung switch case hoac if
+
+	//idex 0 -> TuCoNy
+	//id 1 -> chaubacho
+	//id 2 -> docCoCauBai
+	//id 3 -> phuoc
+	//id 4 -> ten may dua
+	return std::string("phuoc");
+}
+
+int randomHP(int a,int b) {
+
+	//wirte your code here 
+
+	return 100;
+}
+
+void damge(int damgeNumber, Hero &doithu) 
+{
+	doithu.hp = doithu.hp - damgeNumber;
+
+	if (doithu.hp < 0) {
+		doithu.hp = 0;
+	}
+}
+
+bool coChetKhong(Hero& doithu) {
+
+	//neu mau <=0 -> thi chet 
+	//wirte your code here 
+
+	return false;
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	const int soluongDoiThu = 5;
+
+	Hero dsDoithu[soluongDoiThu];
+
+	//vua vao tran random mau tu 0,100
+	for (int i = 0; i < soluongDoiThu; i++) {
+
+		dsDoithu[i].name = getName(i);
+		dsDoithu[i].hp = randomHP(0,100); 
+
+		std::cout << dsDoithu[i].name << " " <<  dsDoithu[i].hp << std::endl;//hien thong tin len man hinh.
+
+		damge(10, dsDoithu[i]); //minh danh no -> no bi mat mau.
+
+		std::cout << dsDoithu[i].name << " " << dsDoithu[i].hp << std::endl;//cap nhat lai thong tin len man hinh.
+	}
+
+
+	//kiem tra co chet ko
+
+	for (int i = 0; i < soluongDoiThu; i++) {
+
+		if (coChetKhong(dsDoithu[i])) {
+
+			std::cout << dsDoithu[i].name << "da chet!";
+		}
+	}
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
