@@ -12,8 +12,11 @@ struct Hero {
 
 std::string getName(int index) {
 
-	//dung switch case hoac if
-
+	//id 0 -> TuCoNy
+	//id 1 -> chaubacho
+	//id 2 -> docCoCauBai
+	//id 3 -> phuoc
+	//id 4 -> ten may dua
 
 	if (index == 0) {
 		return "TuCoNy";
@@ -27,19 +30,22 @@ std::string getName(int index) {
 	}if (index == 4) {
 		return "phu";
 	}
-	//id 0 -> TuCoNy
-	//id 1 -> chaubacho
-	//id 2 -> docCoCauBai
-	//id 3 -> phuoc
-	//id 4 -> ten may dua
+
+	switch (index)
+	{
+	case	0:
+		return "TuCoNy";
+	default:
+		break;
+	}
+	
 	return std::string("phuoc");
 }
 
 int randomHP(int a,int b) {
 
 	//wirte your code here 
-	int randomNumber = std::rand() %100;
-
+	int randomNumber = std::rand() %100;//thu vien c++.
 
 	return randomNumber;
 }
@@ -53,10 +59,8 @@ void damge(int damgeNumber, Hero &doithu)
 	}
 }
 
-bool coChetKhong(Hero& doithu) {
+bool coChetKhong(Hero & doithu) {
 
-	//neu mau <=0 -> thi chet 
-	//wirte your code here
 	if (doithu.hp  <= 0) {
 		return true;
 	}
@@ -65,6 +69,9 @@ bool coChetKhong(Hero& doithu) {
 
 
 void showMinMaxHeros(Hero dsDoithu[5]) {
+
+	//c1:
+
 	int max = dsDoithu[0].hp;
 		for (int i = 0; i <= 5; i++) {
 			if (dsDoithu[i].hp > max){
@@ -72,11 +79,16 @@ void showMinMaxHeros(Hero dsDoithu[5]) {
 			}
 	 }
 	int min = dsDoithu[0].hp;
-	for (int i = 0; i <= 4; i++) {
+	for (int i = 0; i <= 5; i++) {
 		if (dsDoithu[i].hp < min) {
 			min = dsDoithu[i].hp;
 			}
 		}
+
+	// c2: loop 1 lan -> ton cpu
+
+	// c3: https://www.techiedelight.com/find-minimum-maximum-value-array-cpp/ it cpu.
+
 
 	std::cout << "HP lon nhat la: " << max << std::endl<<"HP nho nhat la: "<< min<<std::endl;;
 }
@@ -90,17 +102,22 @@ void decimaToBinary(Hero dsDoithu[5]) {
 		int mau = dsDoithu[i].hp;
 		int binary[32];
 		int index = 0;
+		std::cout << "Mau: " << mau <<" ";
 		while (mau > 0) {
 			binary[index] = mau % 2;
+			//std::cout << binary[index];
 			mau = mau / 2;
 			index++;
 		}
-	for (int i = index - 1; i >= 0; i--) {
-		std::cout << binary[i];;
-	}
 
-}
+		for (int i = index - 1; i >= 0; i--) {
+			std::cout << binary[i];;
+		}
+
+		std::cout << std::endl;
+
 	}
+}
 
 
 
