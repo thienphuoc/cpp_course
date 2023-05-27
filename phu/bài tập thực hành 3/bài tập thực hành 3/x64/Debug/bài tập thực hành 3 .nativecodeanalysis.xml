@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+      <FILENAME>bài tập thực hành 3 .c</FILENAME>
+      <LINE>206</LINE>
+      <COLUMN>1</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'a'.</DESCRIPTION>
+    <FUNCTION>main</FUNCTION>
+    <DECORATED>main</DECORATED>
+    <FUNCLINE>196</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>197</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'a' is an array of 1000 elements (4000 bytes)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>198</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>199</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>200</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>201</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>202</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>202</LINE>
+        <COLUMN>19</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this loop, (assume 'i&lt;n' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>206</LINE>
+        <COLUMN>1</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'a' is an In/Out argument to 'printf' (declared at c:\program files (x86)\windows kits\10\include\10.0.22000.0\ucrt\stdio.h:950)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>206</LINE>
+        <COLUMN>1</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'a[-1]', (readable range is 0 to 999)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+      <FILENAME>bài tập thực hành 3 .c</FILENAME>
+      <LINE>206</LINE>
+      <COLUMN>14</COLUMN>
+    </SFA>
+    <DEFECTCODE>6001</DEFECTCODE>
+    <DESCRIPTION>Using uninitialized memory 'a'.</DESCRIPTION>
+    <FUNCTION>main</FUNCTION>
+    <DECORATED>main</DECORATED>
+    <FUNCLINE>196</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>197</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'a' is not initialized</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>198</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>199</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>200</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>201</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>202</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>202</LINE>
+        <COLUMN>19</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this loop, (assume 'i&lt;n' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>206</LINE>
+        <COLUMN>1</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'a' is an In/Out argument to 'printf' (declared at c:\program files (x86)\windows kits\10\include\10.0.22000.0\ucrt\stdio.h:950)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>207</LINE>
+        <COLUMN>1</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>C:\Users\ADMIN\source\repos\bài tập thực hành 3\bài tập thực hành 3\</FILEPATH>
+        <FILENAME>bài tập thực hành 3 .c</FILENAME>
+        <LINE>206</LINE>
+        <COLUMN>14</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'a' is used, but may not have been initialized</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>
