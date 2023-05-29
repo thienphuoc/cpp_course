@@ -208,7 +208,7 @@ int main() {
 	do {
 		printf("Nhap so luong mat hang: ");
 		scanf_s("%d", &number);
-		getchar(); // Đọc ký tự new line (\n) còn lại trong buffer
+		getchar();
 
 		if (number >= 1 && number <= 10) {
 			printf("Muc do khuyen mai: 0%%\n");
@@ -552,17 +552,110 @@ int main() {
 // 0< index[7] = 1 -> in số '0'
 /*
 Câu 2: (2 điểm)
-Viết chương trình nhập 1 ma trận vuông(giá trị nguyên) với kích thước do người dùng nhập(< 100).Sau đó kiểm tra ma trận vừa nhập có đối xứng qua đường chéo chính không ?
+Viết chương trình nhập 1 ma trận vuông(giá trị nguyên) với kích thước do người dùng nhập(< 100).
+Sau đó kiểm tra ma trận vừa nhập có đối xứng qua đường chéo chính không ?
+*/
+/*#include <stdio.h>
+int main() {
+	int arr[100][100];
+	int count=0;
+	int n;
+	printf("Nhap cap cua ma tran vuong: ");
+		for (int j = 0; j < n; j++) {
+			printf("Nhap arr[%d][%d]: ",i+1,j+1);
+	scanf_s("%d", &n);
+	for (int i = 0; i < n; i++) {
+			scanf_s("%d", &arr[i][j]);
+		}
+	}
+	printf("Ma tran da nhap la: \n");
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				printf(" %d ", arr[i][j]);
+			}
+			printf("\n");
+		}
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				if (arr[i][j] != arr[j][i]) {
+					count++;
+				}
+			}
+		}
+		if (count != 0) {
+			printf("Ma tran khong doi xung qua duong cheo chinh!\n");
+		}
+		else printf("Ma tran doi xung qua duong cheo chinh!");
+		return 0;
+}*/
 
-	Câu 3 : (3 điểm)
+
+
+	/*Câu 3 : (3 điểm)
 	Một công ty điện thoại di động tính phí nhắn tin đã gửi hàng tháng của một thuê bao như sau :
 • Hàng tháng một thuê bao phải đóng phí cơ bản là 50 ngàn đồng.Và 100 tin nhắn đầu tiên được miễn phí.
 • Sau tin nhắn thứ 100, cho đến tin nhắn thứ 200, mỗi tin nhắn bị tính phí là 300 đồng.• Sau tin nhắn thứ 200, mỗi tin nhắn bị tính phí là 400 đồng.
 Thực hiện các yêu cầu sau đây :
 a) Vẽ sơ đồ khối flowchart và viết chương trình thể hiện việc cho phép người dùng nhập vào số lượng tin nhắn đã gửi của  một tháng của một thuê bao.Tính phí mà thuê bao đó phải trả trong tháng đó.
 b) Vẽ sơ đồ và viết chương trình C với yêu cầu tương tự ở câu a nhưng qua mỗi lần nhập chương trình cần xác nhận từ phía người dùng rằng có muốn chương trình tiếp tục thực hiện hay không.Chương trình dừng khi người dùng lựa chọn phương án dừng chương trình.
+*/
+/*#include <stdio.h>
+int main() {
+		int messenge;
+		float fee = 0.;
+		int basic = 50;
+		printf("\nNhap so tin nhan da gui trong thang: ");
+		scanf_s("%d", &messenge);
+		if (messenge < 0) {
+			printf("So tin nhan da nhap khong hop le");
 
-Câu 4: (3 điểm)
+		}
+		else if (messenge >= 0 && messenge <= 100) {
+			fee = basic;
+		}
+		else if (messenge > 100 && messenge <= 200) {
+			fee = basic + 0.3 * (messenge - 100);
+		}
+		else if (messenge > 200) {
+			fee = basic + 100 * 0.3 + 0.4 * (messenge - 200);
+		}
+		printf("So tien thue bao phai tra la: %f ngan dong ", fee);
+}*/
+/*#include <stdio.h>
+#include <string.h>
+int main() {
+	int messenge;
+	char answer[4];
+	do {
+		float fee = 0.;
+		int basic = 50;
+		printf("\nNhap so tin nhan da gui trong thang: ");
+		scanf_s("%d", &messenge);
+		getchar();
+		if (messenge < 0) {
+			printf("So tin nhan da nhap khong hop le");
+
+		}
+		else if (messenge >= 0 && messenge <= 100) {
+			fee = basic;
+		}
+		else if (messenge > 100 && messenge <= 200) {
+			fee = basic + 0.3 * (messenge - 100);
+		}
+		else if (messenge > 200) {
+			fee = basic + 100 * 0.3 + 0.4 * (messenge - 200);
+		}
+		printf("So tien thue bao phai tra la: %f ngan dong ", fee);
+		printf("\nCo muon tiep tuc hay khong (Yes/No): ");
+		fgets(answer, sizeof(answer),stdin);
+		answer[strcspn(answer, "\n")] = '\0';
+		
+	} while (strcmp(answer,"Yes")==0||strcmp(answer,"yes")==0);
+}*/
+
+
+
+/*Câu 4: (3 điểm)
 Các tiểu bang của Mỹ được viết tắt bằng 2 kí tự như sau :
 Tiểu bang của Mỹ 			Viết tắt
 Alabama						 AL
@@ -590,9 +683,55 @@ với:
 s: chuỗi viết tắt.Ví dụ “CA”.
 abbr : mảng các tên viết tắt của các tiểu bang.
 states : mảng các tên tiểu bang.
-n : số tiểu bang có trong mảng states.
+n : số tiểu bang có *rong mảng states.
 hàm trả về tên tiểu bang nếu tìm thấy, NULL nếu không tìm thấy.
 
 c / Hãy viết chương trình chính, 
 dùng một mảng để lưu tên các tiểu bang, và một mảng để lưu tên viết tắt.Sau đó, gọi hàm ở câu a để nhập tên và viết tắt các tiểu bang.Rồi cho phép người dùng nhập tên viết tắt và gọi hàm tra cứu ở câu b để in ra tên đầy đủ của tiểu bang.
 */
+//Câu a)
+#include <stdio.h>
+#include <string.h>
+void inputStates(char states[][80], int n) {
+	for (int i = 0; i < n; i++) {
+			printf("Nhap ten bang %d: ", i + 1);
+			getchar();
+			fgets(states[i], 80, stdin);
+			states[i][strcspn(states[i], "\n")] = '\0';
+	}
+}
+void inputAbbreviation(char abbr[][3], int n) {
+	for (int i = 0; i < n; i++) {
+		printf("Nhap ten viet tat cua bang %d: ", i + 1);
+		getchar();
+		fgets(abbr[i],4 , stdin);
+		abbr[i][strcspn(abbr[i], "\n")] = '\0';
+
+	}
+}
+char* lookup(char* s[], char abbr[][3], char states[][80], int n) {
+	while (s != '0') {
+		printf("Nhap ten viet tat can tra cuu (nhap 0 de dung chuong trinh): ");
+		fgets(s, 3, stdin);
+		for (int i = 0; i < n; i++) {
+			if (strcmp(s, abbr[i]) == 0) {
+				return states[i];
+			}
+			else return NULL;
+		}
+	}
+}
+int main() {
+	char states[80][80];
+	int n;
+	char abbr[80][3];
+	char* s="";
+	printf("Nhap so bang can nhap: ");
+	scanf_s("%d",&n);
+	inputStates(states, n);
+	inputAbbreviation(abbr, n);
+	getchar();
+	char* statename = lookup(s, abbr, states, n);
+
+
+}
