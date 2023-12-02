@@ -5,7 +5,8 @@
 
 //Ví dụ : Cho chuỗi bit có chiều dài 8 là “01100011”, thuật toán phải tính được số thập phân tương ứng là 99.
 
-/*#include <stdio.h>
+/*
+#include <stdio.h>
 #include <string.h>
 
 int binarytoDecimal(char binary[]) {
